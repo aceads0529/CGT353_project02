@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale: 1">
+    <title>CGT 353 - Project 02</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkers.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="page-stretch">
+        <div class="header-flex">
+            <div class="flex-title">
+                <h2 class="subtitle">The fundamental's of</h2>
+                <div class="header-title">Checkers</div>
+            </div>
+            <div class="flex-nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="basics.html">Basics</a></li>
+                        <li><a href="strategy.html">Strategy</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="page-content" class="page-stretch">
+    <h1>Welcome</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis, ex nec accumsan imperdiet, ipsum orci
+        rutrum risus, sed consequat ligula est a nisi. Ut convallis pretium leo sit amet gravida. Nulla faucibus nibh
+        elit, et mollis quam semper eu. Ut sit amet auctor felis. Duis fermentum tincidunt ante vel pulvinar. Aliquam
+        ultricies cursus eros vitae bibendum. Proin non condimentum tortor. Mauris non sollicitudin sapien.</p>
+
+    <h2><a href="index.html">Home</a></h2>
+    <h2><a href="basics.html">Basics</a></h2>
+    <h2><a href="strategy.html">Strategy</a></h2>
+    <h2><a href="history.html">History</a></h2>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="checkers.js"></script>
+
+<script>
+    $(function () {
+        const board1 = new Gameboard(Gamepiece.fullBoard(1, [22]).concat([
+            new Gamepiece(22, [18], 'white')
+        ]));
+
+        const board2 = new Gameboard(Gamepiece.fullBoard(0, [11, 22]).concat([
+            new Gamepiece(18, [11], 'white'),
+            new Gamepiece(15, [-1], 'black')
+        ]));
+
+        const board3 = new Gameboard(Gamepiece.fullBoard(0, [2, 6, 7, 9, 11, 22, 24, 27]).concat([
+            new Gamepiece(18, [11, 2], 'white'),
+            new Gamepiece(15, [-1, -1], 'black'),
+            new Gamepiece(7, [7, -1], 'black')
+        ]));
+
+        $('#demo-movement').append(board1.html);
+        $('#demo-capture').append(board2.html);
+        $('#demo-jump').append(board3.html);
+    });
+</script>
+
+</body>
+</html>

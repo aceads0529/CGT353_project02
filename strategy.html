@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale: 1">
+    <title>CGT 353 - Project 02</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkers.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="page-stretch">
+        <div class="header-flex">
+            <div class="flex-title">
+                <h2 class="subtitle">The fundamental's of</h2>
+                <div class="header-title">Checkers</div>
+            </div>
+            <div class="flex-nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="basics.html">Basics</a></li>
+                        <li><a href="strategy.html">Strategy</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="page-content" class="page-stretch">
+    <h1>Strategy</h1>
+
+    <div class="demo">
+        <div class="demo-text">
+            <h2>Central control</h2>
+            <p>It is important to gain control of the center of the board. From the center, there are fewer spaces
+                between your pieces and anywhere else on the board. Secondly, you can cut off enemy pieces from each
+                other.</p>
+        </div>
+        <div id="demo-center" class="demo-board"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="checkers.js"></script>
+
+<script>
+    $(function () {
+        const board1 = new Gameboard([
+            new Gamepiece(15, [], 'white'),
+            new Gamepiece(19, [], 'white'),
+            new Gamepiece(18, [], 'white'),
+            new Gamepiece(23, [], 'white'),
+            new Gamepiece(14, [], 'white'),
+            new Gamepiece(12, [], 'white'),
+            new Gamepiece(5, [], 'black'),
+            new Gamepiece(21, [], 'black'),
+            new Gamepiece(27, [], 'black'),
+            new Gamepiece(8, [], 'black')
+        ]);
+
+        $('#demo-center').append(board1.html);
+    });
+</script>
+
+</body>
+</html>
