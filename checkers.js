@@ -1,5 +1,4 @@
-$(function () {
-});
+const ANIM_SPEED = 0.5;
 
 class Gameboard {
     constructor(pieces) {
@@ -7,7 +6,7 @@ class Gameboard {
 
         for (let i = 0; i < pieces.length; i++) {
             this.html.append(pieces[i].html);
-            pieces[i].run(1);
+            pieces[i].run(ANIM_SPEED);
         }
     }
 }

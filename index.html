@@ -38,6 +38,8 @@
         elit, et mollis quam semper eu. Ut sit amet auctor felis. Duis fermentum tincidunt ante vel pulvinar. Aliquam
         ultricies cursus eros vitae bibendum. Proin non condimentum tortor. Mauris non sollicitudin sapien.</p>
 
+    <div id="big-match"></div>
+
     <h2><a href="index.html">Home</a></h2>
     <h2><a href="basics.html">Basics</a></h2>
     <h2><a href="strategy.html">Strategy</a></h2>
@@ -47,28 +49,22 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+<script src="data/match.js"></script>
 <script src="checkers.js"></script>
 
 <script>
     $(function () {
-        const board1 = new Gameboard(Gamepiece.fullBoard(1, [22]).concat([
-            new Gamepiece(22, [18], 'white')
-        ]));
+        let pieces = [];
+        for (let i = 0; i < bigMatch.black.length; i++) {
+            let b = bigMatch.black[i];
+            let w = bigMatch.white[i];
 
-        const board2 = new Gameboard(Gamepiece.fullBoard(0, [11, 22]).concat([
-            new Gamepiece(18, [11], 'white'),
-            new Gamepiece(15, [-1], 'black')
-        ]));
+            pieces.push(new Gamepiece(b.position, b.movements, 'black'));
+            pieces.push(new Gamepiece(w.position, w.movements, 'white'));
+        }
 
-        const board3 = new Gameboard(Gamepiece.fullBoard(0, [2, 6, 7, 9, 11, 22, 24, 27]).concat([
-            new Gamepiece(18, [11, 2], 'white'),
-            new Gamepiece(15, [-1, -1], 'black'),
-            new Gamepiece(7, [7, -1], 'black')
-        ]));
-
-        $('#demo-movement').append(board1.html);
-        $('#demo-capture').append(board2.html);
-        $('#demo-jump').append(board3.html);
+        const board = new Gameboard(pieces);
+        $('#big-match').append(board.html);
     });
 </script>
 
