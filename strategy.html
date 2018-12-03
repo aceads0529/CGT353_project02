@@ -51,6 +51,55 @@
         </div>
         <div id="demo-D" class="demo-board"></div>
     </div>
+	<div class="demo">
+        <div class="demo-text">
+            <h2>A-Line Diagonal</h2>
+            <p>The A-line is a line of attack and aggressiveness. A player is fully on the offensive with control of the A-Line. Reinforcement of the base of this line is vital to preventing counterattacks.</p>
+        </div>
+        <div id="demo-A" class="demo-board"></div>
+    </div>
+	<div class="demo">
+        <div class="demo-text">
+            <h2>B-Line Diagonal</h2>
+            <p>This is a weaker line as it involves using the areas of the board that you want to avoid. The square that intersects the B-Line and the D-Line is a dangerous spot on the board to lose as it allows them to bypass your A-Line. This spot is currently occupied by the black piece.</p>
+        </div>
+        <div id="demo-B" class="demo-board"></div>
+    </div>
+	<div class="demo">
+        <div class="demo-text">
+            <h2>C-Line Diagonal</h2>
+            <p>This line is stronger than the B-Line as it directly intersects the A-Line. This intersection space is extremely useful for attacking and counterattacking and is currently the frontmost space being utilized by the white team.</p>
+        </div>
+        <div id="demo-C" class="demo-board"></div>
+    </div>
+	<div class="demo">
+        <div class="demo-text">
+            <h2>E-Line Diagonal</h2>
+            <p>This is a defensive line that is used to support the D-Line from incoming attacks from your opponent.</p>
+        </div>
+        <div id="demo-E" class="demo-board"></div>
+    </div>
+	<div class="demo">
+        <div class="demo-text">
+            <h2>F-Line Diagonal</h2>
+            <p>This line is another defensive line that is used to support the D-Line. Rather than preventing opponents from jumping over the D-Line, this line allows the opponent to jump over the D-Line. The pieces on the F-Line can then jump the attacking pieces.</p>
+        </div>
+        <div id="demo-F" class="demo-board"></div>
+    </div>
+	<div class="demo">
+        <div class="demo-text">
+            <h2>G-Line Diagonal Offensive</h2>
+            <p>The G-Line is actually your opponent's A-Line! Having control of this diagonal can stifle any attacks that your opponent attempts. The following is the best possible formation for an attack on the G-Line.</p>
+        </div>
+        <div id="demo-G-First" class="demo-board"></div>
+    </div>
+	<div class="demo">
+        <div class="demo-text">
+			<h2>G-Line Diagonal Defensive</h2>
+            <p>An alternative use for the G-Line is to occupy it during the very early game to take a strong defensive approach from the start.</p>
+        </div>
+        <div id="demo-G-Second" class="demo-board"></div>
+    </div>
 </div>
 <div class="footer">
     <p class="f">Coded and designed by Aaron Eads, Tyler Simon, and Paul Renner.</p>
@@ -88,9 +137,134 @@
             new Gamepiece(3, [], 'black'),
             new Gamepiece(2, [], 'black')
         ]);
+		
+		const board3 = new Gameboard([
+            new Gamepiece(32, [], 'white'),
+            new Gamepiece(31, [], 'white'),
+            new Gamepiece(27, [], 'white'),
+            new Gamepiece(23, [], 'white'),
+            new Gamepiece(18, [], 'white'),
+            new Gamepiece(14, [], 'white'),
+        ]);
+		
+		const board4 = new Gameboard([
+            new Gamepiece(32, [], 'white'),
+            new Gamepiece(31, [], 'white'),
+            new Gamepiece(27, [], 'white'),
+            new Gamepiece(23, [], 'white'),
+            new Gamepiece(18, [], 'white'),
+            new Gamepiece(14, [], 'white'),
+			new Gamepiece(22, [], 'black'),
+			new Gamepiece(17, [], 'black'),
+        ]);
+		
+		const board5 = new Gameboard([
+            new Gamepiece(14, [], 'white'),
+            new Gamepiece(17, [], 'white'),
+			new Gamepiece(18, [], 'white'),
+            new Gamepiece(21, [], 'white'),
+            new Gamepiece(25, [], 'white'),
+            new Gamepiece(30, [], 'white'),
+            new Gamepiece(5, [], 'black'),
+			new Gamepiece(9, [], 'black'),
+			new Gamepiece(6, [], 'black'),
+			new Gamepiece(10, [], 'black'),
+			new Gamepiece(1, [], 'black'),
+			new Gamepiece(2, [], 'black'),
+			new Gamepiece(3, [], 'black'),
+        ]);
+		const board6 = new Gameboard([
+            new Gamepiece(15, [], 'white'),
+			new Gamepiece(18, [], 'white'),
+            new Gamepiece(22, [], 'white'),
+            new Gamepiece(25, [], 'white'),
+            new Gamepiece(30, [], 'white'),
+			new Gamepiece(26, [], 'white'),
+			new Gamepiece(23, [], 'white'),
+			new Gamepiece(19, [], 'white'),
+			new Gamepiece(16, [], 'white'),
+            new Gamepiece(1, [], 'black'),
+			new Gamepiece(2, [], 'black'),
+			new Gamepiece(3, [], 'black'),
+			new Gamepiece(4, [], 'black'),
+			new Gamepiece(5, [], 'black'),
+			new Gamepiece(6, [], 'black'),
+			new Gamepiece(9, [], 'black'),
+			new Gamepiece(10, [], 'black'),		
+        ]);
+		
+		const board7 = new Gameboard([
+            new Gamepiece(15, [], 'white'),
+			new Gamepiece(18, [], 'white'),
+            new Gamepiece(22, [], 'white'),
+            new Gamepiece(25, [], 'white'),
+            new Gamepiece(30, [], 'white'),
+			new Gamepiece(31, [], 'white'),
+			new Gamepiece(27, [], 'white'),
+			new Gamepiece(24, [], 'white'),
+			new Gamepiece(32, [], 'white'),
+			new Gamepiece(28, [], 'white'),
+			new Gamepiece(20, [], 'white'),
+            new Gamepiece(1, [], 'black'),
+			new Gamepiece(2, [], 'black'),
+			new Gamepiece(3, [], 'black'),
+			new Gamepiece(4, [], 'black'),
+			new Gamepiece(5, [], 'black'),
+			new Gamepiece(6, [], 'black'),
+			new Gamepiece(9, [], 'black'),
+			new Gamepiece(10, [], 'black'),
+			new Gamepiece(14, [], 'black'),
+			new Gamepiece(17, [], 'black'),				
+        ]);
+		
+		const board8 = new Gameboard([
+            new Gamepiece(32, [], 'white'),
+			new Gamepiece(31, [], 'white'),
+            new Gamepiece(28, [], 'white'),
+            new Gamepiece(27, [], 'white'),
+            new Gamepiece(24, [], 'white'),
+			new Gamepiece(23, [], 'white'),
+			new Gamepiece(27, [], 'white'),
+			new Gamepiece(18, [], 'white'),
+			new Gamepiece(14, [], 'white'),			
+        ]);
+		
+		const board9 = new Gameboard([
+            new Gamepiece(32, [], 'white'),
+			new Gamepiece(31, [], 'white'),
+            new Gamepiece(30, [], 'white'),
+            new Gamepiece(29, [], 'white'),
+            new Gamepiece(27, [], 'white'),
+			new Gamepiece(26, [], 'white'),
+			new Gamepiece(25, [], 'white'),
+			new Gamepiece(24, [], 'white'),
+			new Gamepiece(23, [], 'white'),
+			new Gamepiece(22, [], 'white'),
+			new Gamepiece(21, [], 'white'),
+			new Gamepiece(19, [], 'white'),
+            new Gamepiece(1, [], 'black'),
+			new Gamepiece(2, [], 'black'),
+			new Gamepiece(3, [], 'black'),
+			new Gamepiece(4, [], 'black'),
+			new Gamepiece(5, [], 'black'),
+			new Gamepiece(6, [], 'black'),
+			new Gamepiece(7, [], 'black'),
+			new Gamepiece(8, [], 'black'),
+			new Gamepiece(9, [], 'black'),
+			new Gamepiece(10, [], 'black'),
+			new Gamepiece(12, [], 'black'),
+			new Gamepiece(15, [], 'black'),				
+        ]);
 
         $('#demo-center').append(board1.html);
 		$('#demo-D').append(board2.html);
+		$('#demo-A').append(board3.html);
+		$('#demo-B').append(board4.html);
+		$('#demo-C').append(board5.html);
+		$('#demo-E').append(board6.html);
+		$('#demo-F').append(board7.html);
+		$('#demo-G-First').append(board8.html);
+		$('#demo-G-Second').append(board9.html);
     });
 </script>
 
