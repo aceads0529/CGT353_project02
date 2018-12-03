@@ -43,6 +43,14 @@
         </div>
         <div id="demo-center" class="demo-board"></div>
     </div>
+	<div class="demo">
+        <div class="demo-text">
+            <h2>D-Line Diagonal</h2>
+            <p>Diagonals are a great way to separate the board in order to initiate and build strategies. The D-Line diagonal is the most basic diagonal and it splits the board in half.</p>
+			<p>The following example is an example of shared control. Both players are on their own side. Crossing this diagonal would be pushing for an attack, while staying in control of the diagonal gives a player an advantage</p>
+        </div>
+        <div id="demo-D" class="demo-board"></div>
+    </div>
 </div>
 <div class="footer">
     <p class="f">Coded and designed by Aaron Eads, Tyler Simon, and Paul Renner.</p>
@@ -67,8 +75,22 @@
             new Gamepiece(27, [], 'black'),
             new Gamepiece(8, [], 'black')
         ]);
+		
+		const board2 = new Gameboard([
+            new Gamepiece(31, [], 'white'),
+            new Gamepiece(30, [], 'white'),
+            new Gamepiece(26, [], 'white'),
+            new Gamepiece(23, [], 'white'),
+            new Gamepiece(19, [], 'white'),
+            new Gamepiece(14, [], 'black'),
+            new Gamepiece(10, [], 'black'),
+            new Gamepiece(7, [], 'black'),
+            new Gamepiece(3, [], 'black'),
+            new Gamepiece(2, [], 'black')
+        ]);
 
         $('#demo-center').append(board1.html);
+		$('#demo-D').append(board2.html);
     });
 </script>
 

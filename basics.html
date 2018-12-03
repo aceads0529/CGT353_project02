@@ -39,7 +39,7 @@
             <h2>Movement</h2>
             <p>The player is allowed to move one piece per turn. A piece can be moved diagonally one space, either to an
                 open space on its left or its right. The player <b>cannot</b> move a piece backwards (i.e. towards
-                himself).
+                himself), unless the piece is a king.
             </p>
         </div>
         <div id="demo-movement" class="demo-board"></div>
@@ -60,6 +60,8 @@
             <p>After the player has captured an opponent piece, if he is in position to perform another capture, then he
                 may do so. The player may continue to capture pieces as long as he is able to make consecutive
                 jumps.</p>
+			<h2>Kings</h2>
+			<p>If a player's piece reaches the side of the board opposite of them, then that piece becomes a King. The piece that is performing consecutive jumps in this example would therefore become a King. Kings are able to move forwards <b>and</b> backwards!</p>
         </div>
         <div id="demo-jump" class="demo-board"></div>
     </div>
