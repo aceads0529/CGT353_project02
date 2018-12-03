@@ -103,6 +103,19 @@ nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+	border-radius: 2px;
+    padding: 5px 1px;
+	-webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #256;
+
 }
 
 #page-content {
@@ -129,4 +142,18 @@ nav ul li a {
 .demo-board .gameboard {
     margin: 0 auto;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+}
+
+.footer {
+    position: relative;
+    background-color: #256;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    bottom: 0;
+    overflow: hidden;
+    
+}
+.f {
+    color: white;
 }
