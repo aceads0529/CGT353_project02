@@ -12,7 +12,7 @@ body {
 	background-color: #D3D3D3;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
     line-height: 100%;
@@ -29,6 +29,12 @@ h1 {
 h2 {
     font-size: 24px;
     margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+h3 {
+	font-size: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -94,13 +100,13 @@ nav ul {
     max-width: 400px;
 }
 
-nav ul li {
+nav ul li, .panel ul li {
     flex: 1 1 auto;
     text-align: center;
     padding: 0 10px;
 }
 
-nav ul li a {
+nav ul li a, .panel ul li a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -113,9 +119,34 @@ nav ul li a {
     transition: background 0.5s linear;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .panel ul li a:hover {
     background-color: white;
     color: #256;
+}
+
+.accordion {
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.panel {
+	width: 100%;
+    padding: 0 18px;
+    display: none;
+    background-color: #256;
+	color: white;
+	margin-bottom: 50px;
+	text-align: center;
+	list-style: none;
+}
+
+.panel ul {
+	list-style: none;
 }
 
 #page-content {
@@ -165,4 +196,70 @@ nav ul li a:hover {
 
 #big-match {
 	margin: auto;
+}
+
+.floatingMenu {
+    background: #256;
+	color: white;
+    padding: 5px;
+    width: 15%;
+    z-index: 100;
+    position: fixed;
+	text-align: center;
+	margin-left: 18px;
+	border: 3px solid white;
+}
+
+.floatingMenu a, .floatingMenu ul, .panel a, .panel ul {
+    display: block;
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+	.floatingMenu {
+		display: none;
+	}
+	.accordion {
+		display: block;
+	}
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {	
+	.floatingMenu {
+		display: none;
+	}
+	.accordion {
+		display: block;
+	}
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+	.floatingMenu {
+		display: none;
+	}
+	.accordion {
+		display: block;
+	}
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {	
+	.floatingMenu {
+		display: none;
+	}
+	.accordion {
+		display: block;
+	}
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	.floatingMenu {
+		display: block;
+	}
+	.accordion, .panel {
+		display: none;
+	}
 }

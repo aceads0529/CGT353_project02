@@ -31,12 +31,34 @@
     </div>
 </header>
 
+<nav class="floatingMenu">
+	<h3>Rules and Basics</h3>
+	
+	<ul>
+		<li><a href="#movement">Movement</a></li>
+		<li><a href="#capture">Capturing</a></li>
+		<li><a href="#jumpCapture">Capturing (Jump)</a></li>
+		<li><a href="#kings">Kings</a></li>
+		<li><a href="basics.html">Back to Top</a></li>
+	</ul>
+</nav>
+
 <div id="page-content" class="page-stretch">
     <h1>The Basics</h1>
+	
+	<button class="accordion">Rules and Basics</button>
+	<div class="panel">
+		<ul>
+			<li><a href="#movement">Movement</a></li>
+			<li><a href="#capture">Capturing</a></li>
+			<li><a href="#jumpCapture">Capturing (Jump)</a></li>
+			<li><a href="#kings">Kings</a></li>
+		</ul>
+	</div>	
 
     <div class="demo">
         <div class="demo-text">
-            <h2>Movement</h2>
+            <h2 id="movement">Movement</h2>
             <p>The player is allowed to move one piece per turn. A piece can be moved diagonally one space, either to an
                 open space on its left or its right. The player <b>cannot</b> move a piece backwards (i.e. towards
                 himself), unless the piece is a king.
@@ -46,7 +68,7 @@
     </div>
     <div class="demo">
         <div class="demo-text">
-            <h2>Capturing</h2>
+            <h2 id="capture">Capturing</h2>
             <p>If an opponent's piece occupies the left or right diagonal of a player's piece, and there is an open
                 space behind the opponent such that the player could move his piece in a straight line over the opponent
                 to the open space, then the player may capture the opponent's piece. The player's piece remains behind
@@ -56,11 +78,11 @@
     </div>
     <div class="demo">
         <div class="demo-text">
-            <h2>Capturing (Jump)</h2>
+            <h2 id="jumpCapture">Capturing (Jump)</h2>
             <p>After the player has captured an opponent piece, if he is in position to perform another capture, then he
                 may do so. The player may continue to capture pieces as long as he is able to make consecutive
                 jumps.</p>
-			<h2>Kings</h2>
+			<h2 id="kings">Kings</h2>
 			<p>If a player's piece reaches the side of the board opposite of them, then that piece becomes a King. The piece that is performing consecutive jumps in this example would therefore become a King. Kings are able to move forwards <b>and</b> backwards!</p>
         </div>
         <div id="demo-jump" class="demo-board"></div>
@@ -97,6 +119,24 @@
         $('#demo-jump').append(board3.html);
     });
 </script>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+			panel.style.display = "block";
+		}
+    });
+}
+</script>
+
 
 </body>
 </html>
