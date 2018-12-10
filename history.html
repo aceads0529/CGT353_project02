@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!--Header with nav bar-->
 <header>
     <div class="page-stretch">
         <div class="header-flex">
@@ -53,29 +54,6 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="checkers.js"></script>
-
-<script>
-    $(function () {
-        const board1 = new Gameboard(Gamepiece.fullBoard(1, [22]).concat([
-            new Gamepiece(22, [18], 'white')
-        ]));
-
-        const board2 = new Gameboard(Gamepiece.fullBoard(0, [11, 22]).concat([
-            new Gamepiece(18, [11], 'white'),
-            new Gamepiece(15, [-1], 'black')
-        ]));
-
-        const board3 = new Gameboard(Gamepiece.fullBoard(0, [2, 6, 7, 9, 11, 22, 24, 27]).concat([
-            new Gamepiece(18, [11, 2], 'white'),
-            new Gamepiece(15, [-1, -1], 'black'),
-            new Gamepiece(7, [7, -1], 'black')
-        ]));
-
-        $('#demo-movement').append(board1.html);
-        $('#demo-capture').append(board2.html);
-        $('#demo-jump').append(board3.html);
-    });
-</script>
 
 </body>
 </html>

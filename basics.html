@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!--Header with nav bar-->
 <header>
     <div class="page-stretch">
         <div class="header-flex">
@@ -31,6 +32,7 @@
     </div>
 </header>
 
+<!--Floating side menu-->
 <nav class="floatingMenu">
 	<h3>Rules and Basics</h3>
 	
@@ -46,6 +48,7 @@
 <div id="page-content" class="page-stretch">
     <h1>The Basics</h1>
 	
+	<!--Accordion menu that appears when screen size is smaller-->
 	<button class="accordion">Rules and Basics</button>
 	<div class="panel">
 		<ul>
@@ -97,6 +100,7 @@
         crossorigin="anonymous"></script>
 <script src="checkers.js"></script>
 
+<!--Creates checkerboards and animates pieces-->
 <script>
     $(function () {
         const board1 = new Gameboard(Gamepiece.fullBoard(1, [22]).concat([
@@ -120,6 +124,7 @@
     });
 </script>
 
+<!--Button functionality for accordion menu-->
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
